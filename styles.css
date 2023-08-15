@@ -140,11 +140,20 @@ body {
     margin-left: auto;
 
 }
-.post-avatar img {
-    display: inline-flex;
-}
 
 .post-avatar img {
     height: 40px;
     border-radius: 50%;
+}
+
+.post{
+    display: flex;
+}
+.postheader {
+    justify-content: center;
+}
+.post__headerText{
+    display: flex;
+    padding-top: 10px;
+    padding-left: 25px;
 }
