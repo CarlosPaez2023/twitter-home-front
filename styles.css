@@ -147,6 +147,7 @@ body {
 }
 
 .post{
+    padding-top: 20px;
     display: flex;
 }
 .postheader {
