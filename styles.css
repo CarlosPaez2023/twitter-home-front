@@ -140,3 +140,11 @@ body {
     margin-left: auto;
 
 }
+.post-avatar img {
+    display: inline-flex;
+}
+
+.post-avatar img {
+    height: 40px;
+    border-radius: 50%;
+}
