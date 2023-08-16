@@ -76,10 +76,12 @@ body {
     padding: 20px;
     flex: 0.5;
     border-right: 3px solid var(--twitter-background);
-    min-width: fit-content;
     overflow-y:scroll ;
-    overflow:hidden;
 }
+.feed::-webkit-scrollbar {
+    display: none;
+}
+
 
 .feed__header {
     position: sticky;
@@ -104,9 +106,7 @@ body {
     flex-direction: row;
 }
 
-.feed {
-    -ms-overflow-style: none;
-}
+
 
 .tweetBox {
     padding: 10px;
@@ -141,20 +141,102 @@ body {
 
 }
 
-.post-avatar img {
-    height: 40px;
-    border-radius: 50%;
-}
 
 .post{
     padding-top: 20px;
     display: flex;
+    align-items: flex-start;
+    border-bottom: 3px solid var(--twitter-background);
+    padding-bottom: 10px;
+}
+
+.post-avatar img {
+    height: 40px;
+    border-radius: 50%;
+    padding-left: 10px;
 }
 .postheader {
     justify-content: center;
 }
 .post__headerText{
     display: flex;
-    padding-top: 10px;
-    padding-left: 25px;
+    padding-left: 10px;
+    padding-bottom: 5px;
 }
+.post__headerText h3{
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+.post__headerDescription{
+    padding-left: 10px;
+    margin-top: 15px;
+    padding-bottom: 10px;
+    font-size: 15px;
+}
+
+.post__body  {
+    flex:1;
+    padding:3px 10px 10px 10px;
+
+}
+.post__body img {
+    padding-top: 10px;
+
+    padding-bottom: 20px;
+    width: 450px;
+    object-fit: contain;
+    border-radius:20px;
+
+}
+
+.post__footer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.post__headerSpan{
+    font-weight: 600;
+    font-size: 16px;
+    color:grey;
+}
+.post__headerSpan .verified {
+    color:var(--twitter-color);
+}
+
+.trends {
+    padding: 20px;
+    flex: 0.2;
+}
+
+.trends__input {
+    display: flex;
+    align-items: center;
+    background-color: var(--twitter-background);
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.trends__input input {
+    border: none;
+    background-color:var(--twitter-background);
+    outline: none;
+}
+.trends__input .search__icon {
+color:grey;
+}
+
+.trends__container {
+    margin-top: 15px;
+    margin-left: 20px;
+    padding: 20ox;
+    background-color:#f5f8fa;
+    border-radius:20px ;
+    padding: 20px;
+    align-items: baseline;
+}
+.trends__container h2 {
+    padding-bottom: 15px;
+}
+
